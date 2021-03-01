@@ -1,5 +1,3 @@
-学习笔记
-
 # 深度优先搜索、广度优先搜索的实现和特性
 
 搜索 - 遍历
@@ -11,7 +9,7 @@
     * 广度优先： breadth first search
 
 ### 深度优先：
-···
+```
 # 二叉树
 def dfs(node):
     if node is visited:
@@ -23,8 +21,8 @@ def dfs(node):
     # ... # logic here
     dfs(node.left)
     dfs(node.right)
-···
-···
+```
+```
 # 多叉树
 visited = set()
 def dfs(node, visited):
@@ -34,10 +32,10 @@ def dfs(node, visited):
     for next_node in node.children():
         if not next_node in visited:
             dfs(next_node, visited)
-···
+```
 
 ### 广度优先：
-···
+```
 def BFS(graph, start, end):
     queue = []
     queue.append(start)
@@ -53,7 +51,7 @@ def BFS(graph, start, end):
 
     # other processing work
     ...
-···
+```
 
 
 ### 贪心算法 Greedy
@@ -72,7 +70,7 @@ def BFS(graph, start, end):
 3. 能够通过索引访问
 
 代码模板
-
+```
 left, right = 0, len(array)-1
 while left <= right:
     mid = (left + right) / 2
@@ -83,4 +81,4 @@ while left <= right:
         left = mid + 1
     else:
         right = mid - 1
-    
+```
